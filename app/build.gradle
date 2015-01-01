@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion '19.1.0'
+
+    defaultConfig {
+        applicationId "budget.example.com.budget"
+        minSdkVersion 14
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            apply plugin: 'announce'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

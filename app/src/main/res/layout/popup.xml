@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#ff060606">
+
+    <TextView
+        android:id="@+id/income_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Income Amount:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/UserInput"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:ems="1"
+        android:editable="true"
+        android:layout_toEndOf="@+id/income_amount"
+        android:textColor="#ff040404"
+        android:background="#fff7f7f7"
+        android:layout_alignBottom="@+id/income_amount"
+        android:layout_toRightOf="@+id/income_amount"
+        android:layout_marginLeft="32dp"
+        android:inputType="number">
+
+        <requestFocus />
+
+    </EditText>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/submit"
+        android:layout_below="@+id/UserInput"
+        android:layout_alignRight="@+id/UserInput"
+        android:layout_alignEnd="@+id/UserInput"
+        android:layout_alignLeft="@+id/UserInput"
+        android:layout_alignStart="@+id/UserInput" />
+
+
+</RelativeLayout>
