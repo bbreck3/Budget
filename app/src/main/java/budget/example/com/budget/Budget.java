@@ -39,7 +39,7 @@ public class Budget extends Activity {
 
                 Intent intent = new Intent(getApplicationContext(), Budget_breakdown.class);
 
-                intent.putExtra(userIncome.toString(),userIncome.getText().toString());
+                intent.putExtra("user_income",userIncome.getText().toString());
                 startActivity(intent);
                 income_amount = (TextView) findViewById(R.id.income_amount);
                 income_amount.setText(userIncome.getText());

@@ -21,22 +21,23 @@ public class Budget_breakdown extends Activity {
 
     public Button user_submit,food_update,savings_update,laundry_update,rent_update;
     public TextView food, laundry,savings,expences,rent,food_amount,laundry_amount,savings_amount,income_amount, rent_amount;
-    public Intent intent;
     String user_income;
+    String test= "test";
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_budget_breakdown);
-        savedInstanceState = intent.getExtras();
-        user_income = savedInstanceState.getString(userIncome.toString());
-        //Intent intent = getIntent();
-        //user_income = intent.getStringExtra(userIncome.toString());
-        //Bundle extras = getIntent().getStringExtra(userIncome.toString());
-        //if(extras !=null){
-          //   user_income =extras.getString(userIncome.getText().toString());
-        //}
-      // income_amount = (TextView) findViewById(R.id.income_amount);
+        Intent intent = getIntent();
+
+        user_income = intent.getStringExtra("user_income");
+
+        income_amount = (TextView)findViewById(R.id.income_amount);
         income_amount.setText(user_income);
+
         food_textbox = (EditText) findViewById(R.id.food_textbox);
         food_update = (Button) findViewById(R.id.update_food);
         food_update.setOnClickListener(new View.OnClickListener() {
@@ -48,16 +49,6 @@ public class Budget_breakdown extends Activity {
 
         });
         rent_textbox = (EditText) findViewById(R.id.rent_textbox);
-        savings_textbox = (EditText) findViewById(R.id.rent_textbox);
-        laundry_textbox = (EditText) findViewById(R.id.laundry_textbox);
-
-
-        food_amount = (TextView) findViewById(R.id.food_amount);
-        laundry_amount = (TextView) findViewById(R.id.laundry_amount);
-        savings_amount = (TextView) findViewById(R.id.savings_amount);
-        rent_amount = (TextView) findViewById(R.id.rent_amount);
-
-
         rent_update = (Button) findViewById(R.id.update_rent);
         rent_update.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -65,6 +56,16 @@ public class Budget_breakdown extends Activity {
             }
 
         });
+        savings_textbox = (EditText) findViewById(R.id.rent_textbox);
+        savings_update = (Button) findViewById(R.id.update_savings);
+        savings_update.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                savings_amount.setText(savings_textbox.getText());
+            }
+
+        });
+
+        laundry_textbox = (EditText) findViewById(R.id.laundry_textbox);
         laundry_update = (Button) findViewById(R.id.update_laundry);
         laundry_update.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -73,13 +74,16 @@ public class Budget_breakdown extends Activity {
 
         });
 
-        savings_update = (Button) findViewById(R.id.update_savings);
-        savings_update.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                savings_amount.setText(savings_textbox.getText());
-            }
+        food_amount = (TextView) findViewById(R.id.food_amount);
+        laundry_amount = (TextView) findViewById(R.id.laundry_amount);
+        savings_amount = (TextView) findViewById(R.id.savings_amount);
+        rent_amount = (TextView) findViewById(R.id.rent_amount);
 
-        });
+
+
+
+
+
 
     }
 
