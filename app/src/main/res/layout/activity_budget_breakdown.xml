@@ -171,10 +171,10 @@
         android:layout_height="wrap_content"
         android:text="0.0"
         android:id="@+id/remaining"
-        android:textColor="#ffffffff"
-        android:layout_below="@+id/expendentures"
-        android:layout_alignLeft="@+id/expendentures"
-        android:layout_alignStart="@+id/expendentures" />
+        android:textColor="#ff080808"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/balance_amount"
+        android:layout_toEndOf="@+id/balance_amount" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -205,9 +205,9 @@
         android:text="Remaining"
         android:id="@+id/textView9"
         android:textColor="#ffffffff"
-        android:layout_below="@+id/Expenditure_Label"
-        android:layout_alignLeft="@+id/Expenditure_Label"
-        android:layout_alignStart="@+id/Expenditure_Label" />
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -248,8 +248,7 @@
         android:text="Update"
         android:id="@+id/update_laundry"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/laundry_amount"
-        android:layout_toEndOf="@+id/laundry_amount" />
+        android:layout_toRightOf="@+id/laundry_amount" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -258,9 +257,9 @@
         android:id="@+id/balance_amount"
         android:textColor="#ffffffff"
         android:background="#ff030303"
-        android:layout_alignBottom="@+id/balance"
-        android:layout_alignLeft="@+id/remaining"
-        android:layout_alignStart="@+id/remaining" />
+        android:layout_alignTop="@+id/textView9"
+        android:layout_alignLeft="@+id/expendentures"
+        android:layout_alignStart="@+id/expendentures" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -268,20 +267,18 @@
         android:layout_height="wrap_content"
         android:text="Balance"
         android:id="@+id/balance"
-        android:layout_below="@+id/textView9"
-        android:layout_alignLeft="@+id/textView9"
-        android:layout_alignStart="@+id/textView9" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sum"
-        android:id="@+id/sum"
         android:layout_below="@+id/update_laundry"
-        android:layout_alignRight="@+id/update_laundry"
-        android:layout_alignEnd="@+id/update_laundry"
         android:layout_alignLeft="@+id/update_laundry"
         android:layout_alignStart="@+id/update_laundry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--------------------------------------------"
+        android:id="@+id/textView"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/expendentures"
+        android:layout_alignLeft="@+id/Expenditure_Label"
+        android:layout_alignStart="@+id/Expenditure_Label" />
 
 </RelativeLayout>

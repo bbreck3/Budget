@@ -21,10 +21,10 @@ public class Budget_breakdown extends Activity {
     private Context context = this;
 
     public Button user_submit,food_update,savings_update,laundry_update,rent_update,balance,sum;
-    public TextView food, laundry,savings,expences,rent,food_amount,laundry_amount,savings_amount,income_amount, rent_amount,balance_amount, remaining;
-    public static int tot_expences;
+    public static TextView food, laundry,savings,expences,rent,food_amount,laundry_amount,savings_amount,income_amount, rent_amount,balance_amount, remaining;
+    public static int tot_expences,food_val, sav_val, rent_val,laundry_val;
     String user_income;
-    String test= "test";
+   // String test= "test";
 
 
 
@@ -77,28 +77,27 @@ public class Budget_breakdown extends Activity {
 
 
         expences = (TextView)findViewById(R.id.expendentures);
-        sum = (Button)findViewById(R.id.sum);
-        sum.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View view){
-                    int food = Integer.parseInt(food_amount.getText().toString());
-                    int sav =  Integer.parseInt(savings_amount.getText().toString());
-                    int rent =  Integer.parseInt(rent_amount.getText().toString());
-                    int laundry =  Integer.parseInt(laundry_amount.getText().toString());
-                    tot_expences = food + sav +rent + laundry;
-                    expences.setText(Integer.toString(tot_expences));                }
-
-        });
-        remaining = (TextView)findViewById(R.id.remaining);
-        balance_amount = (TextView)findViewById(R.id.balance_amount);
         balance = (Button)findViewById(R.id.balance);
         balance.setOnClickListener(new View.OnClickListener() {
-            int test = Integer.parseInt(user_income.toString());
-            int leftover =  tot_expences;//test-tot_expences;
-            public void onClick(View view) {
-                remaining.setText(Integer.toString(leftover));
-                balance_amount.setText(Integer.toString(leftover));
-            }
+                public void onClick(View view){
+                     food_val = Integer.parseInt(food_amount.getText().toString());
+                     sav_val =  Integer.parseInt(savings_amount.getText().toString());
+                     rent_val =  Integer.parseInt(rent_amount.getText().toString());
+                     laundry_val =  Integer.parseInt(laundry_amount.getText().toString());
+                    tot_expences = food_val + sav_val +rent_val + laundry_val;
+                    expences.setText(Integer.toString(tot_expences));
+                    int test = Integer.parseInt(income_amount.getText().toString());
+                    int leftover = test-tot_expences;//test-tot_expences;
+                    remaining.setText(Integer.toString(leftover));
+                    balance_amount.setText(Integer.toString(leftover));
+                }
+
         });
+
+
+        remaining = (TextView)findViewById(R.id.remaining);
+       balance_amount = (TextView)findViewById(R.id.balance_amount);
+
 
         food_amount = (TextView) findViewById(R.id.food_amount);
         laundry_amount = (TextView) findViewById(R.id.laundry_amount);
