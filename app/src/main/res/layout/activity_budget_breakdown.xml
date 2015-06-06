@@ -99,7 +99,6 @@
         android:id="@+id/rent_textbox"
         android:textColor="#ff030303"
         android:background="#fff7f7f7"
-        android:layout_alignTop="@+id/update_rent"
         android:layout_alignLeft="@+id/savings_textbox"
         android:layout_alignStart="@+id/savings_textbox" />
 
@@ -214,41 +213,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Update"
-        android:id="@+id/update_rent"
-        android:layout_toEndOf="@+id/savings_amount"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/update_savings"
-        android:layout_alignEnd="@+id/update_savings" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update"
-        android:id="@+id/update_savings"
-        android:singleLine="true"
-        android:layout_alignTop="@+id/savings_textbox"
-        android:layout_alignLeft="@+id/update_food"
-        android:layout_alignStart="@+id/update_food" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update"
-        android:id="@+id/update_food"
-        android:layout_alignBottom="@+id/food_textbox"
-        android:layout_alignLeft="@+id/update_laundry"
-        android:layout_alignStart="@+id/update_laundry" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update"
         android:id="@+id/update_laundry"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/laundry_amount" />
+        android:layout_toRightOf="@+id/laundry_amount"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -268,8 +236,8 @@
         android:text="Balance"
         android:id="@+id/balance"
         android:layout_below="@+id/update_laundry"
-        android:layout_alignLeft="@+id/update_laundry"
-        android:layout_alignStart="@+id/update_laundry" />
+        android:layout_alignRight="@+id/remaining"
+        android:layout_alignEnd="@+id/remaining" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -41,39 +41,10 @@ public class Budget_breakdown extends Activity {
         income_amount.setText(user_income);
 
         food_textbox = (EditText) findViewById(R.id.food_textbox);
-        food_update = (Button) findViewById(R.id.update_food);
-        food_update.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                food_amount.setText(food_textbox.getText());
-            }
-
-        });
         rent_textbox = (EditText) findViewById(R.id.rent_textbox);
-        rent_update = (Button) findViewById(R.id.update_rent);
-        rent_update.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                rent_amount.setText(rent_textbox.getText());
-            }
-
-        });
         savings_textbox = (EditText) findViewById(R.id.savings_textbox);
-        savings_update = (Button) findViewById(R.id.update_savings);
-        savings_update.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                savings_amount.setText(savings_textbox.getText());
-            }
-
-        });
-
         laundry_textbox = (EditText) findViewById(R.id.laundry_textbox);
-        laundry_update = (Button) findViewById(R.id.update_laundry);
-        laundry_update.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                laundry_amount.setText(laundry_textbox.getText());
-            }
 
-        });
 
 
         expences = (TextView)findViewById(R.id.expendentures);

@@ -8,7 +8,41 @@
     android:padding="10dp"
     android:background="#ff060606">
 
-    <TextView
+
+
+        <TextView
+            android:id="@+id/income_amnt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter You Income Amount"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fbf8f5f5"
+            android:background="#ff010201" />
+
+        <EditText
+            android:id="@+id/income_amount_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fffffdfb"
+            android:layout_below="@+id/income_amnt_view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <requestFocus />
+
+        </EditText>
+
+
+
+
+
+
+
+
+
+
+
+    <!--<TextView
         android:id="@+id/income_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +81,7 @@
         android:layout_alignRight="@+id/UserInput"
         android:layout_alignEnd="@+id/UserInput"
         android:layout_alignLeft="@+id/UserInput"
-        android:layout_alignStart="@+id/UserInput" />
+        android:layout_alignStart="@+id/UserInput" />-->
 
 
 </RelativeLayout>
